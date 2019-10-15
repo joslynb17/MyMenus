@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    <title>Stack Index</title>
+</head>
+<body>
+    <div class="w3-sidebar w3-bar-block" style="width:25%">
+        <a href="@Url.Action("AddOne", "Stack")" class="w3-bar-item w3-button">Add One Item to Stack</a>
+        <a href="@Url.Action("AddHuge", "Stack")" class="w3-bar-item w3-button">Add Huge List of Items to Stack</a>
+        <a href="@Url.Action("Display", "Stack")" class="w3-bar-item w3-button">Display Stack</a>
+        <a href="@Url.Action("Delete", "Stack")" class="w3-bar-item w3-button">Delete from Stack</a>
+        <a href="@Url.Action("Clear", "Stack")" class="w3-bar-item w3-button">Clear Stack</a>
+        <a href="@Url.Action("Search", "Stack")" class="w3-bar-item w3-button">Search Stack</a>
+        <a href="@Url.Action("Return", "Stack")" class="w3-bar-item w3-button">Return to Main Menu</a>
+        <br />
+        <br />
+        <div style="padding: 10px" margin-left="20px">
+            <p>@ViewBag.Message</p>
+        </div>
+    </div>
+    <div style="margin-left:25%">
+        @foreach (var sData in ViewBag.MyStack)
+        {
+            <p>@sData</p>
+        }
+    </div>
+
+</body>
+</html>

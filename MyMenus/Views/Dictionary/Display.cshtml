@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="../Content/StyleSheet1.css" />
+    <title>Display Dictionary</title>
+</head>
+<body class="center textcenter">
+    @foreach (KeyValuePair<string, int> entry in ViewBag.MyDictionary)
+    {
+        <p>@entry.Key, @entry.Value</p>
+    }
+
+    <div class="mainmenu">
+        <a href="@Url.Action("ReturnAgain", "Dictionary")">Return to Dictionary Page</a>
+    </div>
+
+</body>
+</html>

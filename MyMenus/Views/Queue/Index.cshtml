@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    <title>Queue Index</title>
+</head>
+<body>
+    <div class="w3-sidebar w3-bar-block" style="width:25%">
+
+        <a href="@Url.Action("AddOne", "Queue")" class="w3-bar-item w3-button">Add One Item to Queue</a>
+        <a href="@Url.Action("AddHuge", "Queue")" class="w3-bar-item w3-button">Add Huge List of Items to Queue</a>
+        <a href="@Url.Action("Display", "Queue")" class="w3-bar-item w3-button">Display Queue</a>
+        <a href="@Url.Action("Delete", "Queue")" class="w3-bar-item w3-button">Delete from Queue</a>
+        <a href="@Url.Action("Clear", "Queue")" class="w3-bar-item w3-button">Clear Queue</a>
+        <a href="@Url.Action("Search", "Queue")" class="w3-bar-item w3-button">Search Queue</a>
+        <a href="@Url.Action("Return", "Queue")" class="w3-bar-item w3-button">Return to Main Menu</a>
+        <div style="padding: 10px">
+            <p>@ViewBag.Message</p>
+        </div>
+    </div>
+
+    <div style="margin-left: 50%" class="textcenter">
+        @foreach (var sData in ViewBag.MyQueue)
+        {
+            <p>@sData</p>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    <title>Dictionary Index</title>
+</head>
+<body>
+    <div class="w3-sidebar w3-bar-block" style="width:25%">
+        <a href="@Url.Action("AddOne", "Dictionary")" class="w3-bar-item w3-button">Add One Item to Dictionary</a>
+        <a href="@Url.Action("AddHuge", "Dictionary")" class="w3-bar-item w3-button">Add Huge List of Items to Dictionary</a>
+        <a href="@Url.Action("Display", "Dictionary")" class="w3-bar-item w3-button">Display Dictionary</a>
+        <a href="@Url.Action("Delete", "Dictionary")" class="w3-bar-item w3-button">Delete from Dictionary</a>
+        <a href="@Url.Action("Clear", "Dictionary")" class="w3-bar-item w3-button">Clear Dictionary</a>
+        <a href="@Url.Action("Search", "Dictionary")" class="w3-bar-item w3-button">Search Dictionary</a>
+        <a href="@Url.Action("Return", "Dictionary")" class="w3-bar-item w3-button">Return to Main Menu</a>
+        <div style="padding: 10px">
+            <p>@ViewBag.Message</p>
+        </div>
+    </div>
+
+    <div style="margin-left:25%">
+        @foreach (KeyValuePair<string, int> entry in ViewBag.MyDictionary)
+        {
+            <p>@entry.Key, @entry.Value</p>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="w3-bar w3-dark-grey">
+        <a href="@Url.Action("Index", "Stack")" class="w3-bar-item w3-button" style="width:25%">Stack</a>
+        <a href="@Url.Action("Index", "Queue")" class="w3-bar-item w3-button" style="width:25%">Queue</a>
+        <a href="@Url.Action("Index", "Dictionary")" class="w3-bar-item w3-button" style="width:25%">Dictionary</a>
+        <a href="@Url.Action("Exit", "Home")" class="w3-bar-item w3-button" style="width:25%">Exit</a>
+    </div>
+    <br />
+    <br />
+    <br />
+    <h1 style="padding-left:30px">
+        Choose a data structure to play with!
+    </h1>
+    <img src="../Graphics/lilkylo.jpg" style="margin-right:30px"/>
+</body>
+</html>

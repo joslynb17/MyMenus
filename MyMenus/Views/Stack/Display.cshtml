@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="../Content/StyleSheet1.css"/>
+    <title>Display Stack</title>
+</head>
+<body class="center textcenter">
+    @foreach (var sData in ViewBag.MyStack)
+    {
+        <p>@sData</p>
+    }
+    
+    <div class="mainmenu">
+        <a href="@Url.Action("ReturnAgain", "Stack")">Return to Stack Page</a>
+    </div>
+
+</body>
+</html>
